@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from "./../Asset/images/logo.png"
 
@@ -14,22 +15,22 @@ function Header() {
 
                     <ul className="navbar-nav m-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="/contact">تماس با ما</a>
+                            <Link className="nav-link" to="/contact">تماس با ما</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/about">درباره ما</a>
+                            <Link className="nav-link" to="/about">درباره ما</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/pricelist">لیست قیمت ها</a>
+                            <Link className="nav-link" to="/pricelist">لیست قیمت ها</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/feature">امکانات</a>
+                            <Link className="nav-link" to="/feature">امکانات</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/products">محصولات</a>
+                            <Link className="nav-link" to="/products">محصولات</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="/">صفحه اصلی</a>
+                            <Link className="nav-link" to="/">صفحه اصلی</Link>
                         </li>
                     </ul>
                     <img src={Logo}/>
