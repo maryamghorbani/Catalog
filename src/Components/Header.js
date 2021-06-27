@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Logo from "./../Asset/images/logo.png"
+
+const activestyle = {
+    backgroundColor : 'red',
+    borderRadius : '4px'
+}
 
 
 function Header() {
@@ -15,22 +20,22 @@ function Header() {
 
                     <ul className="navbar-nav m-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/contact">تماس با ما</Link>
+                            <NavLink className="nav-link" to="/contact" activeStyle={activestyle}>تماس با ما</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about">درباره ما</Link>
+                            <NavLink className="nav-link" to="/about" activeStyle={activestyle}>درباره ما</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/pricelist">لیست قیمت ها</Link>
+                            <NavLink className="nav-link" to="/pricelist" activeStyle={activestyle}>لیست قیمت ها</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/feature">امکانات</Link>
+                            <NavLink className="nav-link" to="/feature" activeStyle={activestyle}>امکانات</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/products">محصولات</Link>
+                            <NavLink className="nav-link" to="/products" activeStyle={activestyle}>محصولات</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">صفحه اصلی</Link>
+                            <NavLink className="nav-link" exact to="/" activeStyle={activestyle}>صفحه اصلی</NavLink>
                         </li>
                     </ul>
                     <img src={Logo}/>
