@@ -1,24 +1,31 @@
 import React from 'react';
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol } from 'mdb-react-ui-kit';
 
+import photos from './Data/photos.json'
+
 
 function Card() {
+
+
+
     return (
         <MDBCol>
-            <MDBCard className='h-100'>
+            {
+                photos.map (photo =>
+                    <MDBCard className='h-100'>
                         <MDBCardImage
-                            src='https://mdbcdn.b-cdn.net/img/new/standard/city/041.jpg'
-                            alt='...'
+                            src={photo.src}
+                            alt={photo.alt}
                             position='top'
                         />
                         <MDBCardBody>
-                            <MDBCardTitle>Card title</MDBCardTitle>
-                            <MDBCardText>
-                                This is a longer card with supporting text below as a natural lead-in to additional content.
-                                This content is a little bit longer.
-                            </MDBCardText>
+                            <MDBCardTitle>{photo.title}</MDBCardTitle>
+                            <MDBCardText>{photo.caption}</MDBCardText>
                         </MDBCardBody>
                     </MDBCard>
+                )
+            }
+
         </MDBCol>
     )
 }
