@@ -2,17 +2,14 @@ import React from 'react';
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol } from 'mdb-react-ui-kit';
 
 
-function Card() {
-
-
-
+function Card({ src, title, alt, caption }) {
     return (
         <MDBCol>
             <MDBCard className='h-100'>
-                <MDBCardImage src="mm" alt="m" position='top'/>
+                <MDBCardImage src={src} alt={alt} position='top'/>
                 <MDBCardBody>
-                    <MDBCardTitle>m</MDBCardTitle>
-                    <MDBCardText>s</MDBCardText>
+                    <MDBCardTitle>{title}</MDBCardTitle>
+                    <MDBCardText>{caption}</MDBCardText>
                 </MDBCardBody>
             </MDBCard>
         </MDBCol>
