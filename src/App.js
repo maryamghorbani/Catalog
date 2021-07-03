@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router , Route } from 'react-router-dom';
-import MainSlider from "./Components/MainSlider";
 import Header from "./Components/Header";
 import Cards from "./Components/Cards";
+import data from './Components/Data/maindata.json'
 
 // import Routs
 import Home from "./Routs/Home";
@@ -13,7 +13,6 @@ import Contact from "./Routs/Contact";
 
 
 function App() {
-
   return (
       <Router>
           <>
@@ -23,7 +22,7 @@ function App() {
                   <Route path="/About" component={About} />
                   <Route path="/Contact" component={Contact} />
               </main>
-              <Cards />
+              <Cards cardTitle={data[0].cardstitle} />
           </>
       </Router>
   );
