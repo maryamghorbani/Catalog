@@ -1,8 +1,12 @@
 import React from "react";
+import Footer from "../Components/Footer";
 
 function About() {
     return (
-        <h2>About Page</h2>
+        <>
+            <h2>About Page</h2>
+            <Footer />
+        </>
     )
 }
 

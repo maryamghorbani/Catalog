@@ -9,6 +9,8 @@ import Home from "./Routs/Home";
 import About from "./Routs/About";
 import Contact from "./Routs/Contact";
 import AboutSection from "./Components/AboutSection";
+import Footer from "./Components/Footer";
+import MainSlider from "./Components/MainSlider";
 
 
 
@@ -18,6 +20,7 @@ function App() {
       <Router>
           <>
               <Header navLinkTitles={data[0]} />
+              <MainSlider />
               <main>
                   <Route path="/" component={Home} exact />
                   <Route path="/About" component={About} />
@@ -25,6 +28,7 @@ function App() {
               </main>
               <Cards cardTitle={data[1].cardstitle} />
               <AboutSection aboutTitle={data[2]} />
+              <Footer />
           </>
       </Router>
   );
