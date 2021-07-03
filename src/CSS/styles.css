@@ -235,3 +235,10 @@ button:hover {
         font-size: 32px;
     }
 }
+
+.header {
+    display: inline-block;
+}
+.sticky-header {
+    background-color: red;
+}

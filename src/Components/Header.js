@@ -7,12 +7,17 @@ const activestyle = {
     backgroundColor : 'red',
     borderRadius : '4px'
 }
+const stickyheaderstyle = {
+    position : 'sticky',
+    top : '0',
+    zIndex : '1'
+}
 
 
 function Header({ navLinkTitles }) {
     return (
         <>
-            <div className="navbar navbar-dark bg-dark shadow-sm navbar-expand-md">
+            <div className="navbar navbar-dark bg-dark shadow-sm navbar-expand-md" style={stickyheaderstyle}>
                 <div className="container d-flex justify-content-between">
                     <a href="#" className="navbar-brand d-flex align-items-center">
 
