@@ -9,7 +9,7 @@ const activestyle = {
 }
 
 
-function Header() {
+function Header({ navLinkTitles }) {
     return (
         <>
             <div className="navbar navbar-dark bg-dark shadow-sm navbar-expand-md">
@@ -20,22 +20,22 @@ function Header() {
 
                     <ul className="navbar-nav m-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/contact" activeStyle={activestyle}>تماس با ما</NavLink>
+                            <NavLink className="nav-link" to="/contact" activeStyle={activestyle}>{navLinkTitles.contact}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/about" activeStyle={activestyle}>درباره ما</NavLink>
+                            <NavLink className="nav-link" to="/about" activeStyle={activestyle}>{navLinkTitles.about}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/pricelist" activeStyle={activestyle}>لیست قیمت ها</NavLink>
+                            <NavLink className="nav-link" to="/pricelist" activeStyle={activestyle}>{navLinkTitles.pricelist}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/feature" activeStyle={activestyle}>امکانات</NavLink>
+                            <NavLink className="nav-link" to="/feature" activeStyle={activestyle}>{navLinkTitles.feature}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/products" activeStyle={activestyle}>محصولات</NavLink>
+                            <NavLink className="nav-link" to="/products" activeStyle={activestyle}>{navLinkTitles.products}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/" activeStyle={activestyle}>صفحه اصلی</NavLink>
+                            <NavLink className="nav-link" exact to="/" activeStyle={activestyle}>{navLinkTitles.home}</NavLink>
                         </li>
                     </ul>
                     <img src={Logo}/>

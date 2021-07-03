@@ -16,7 +16,7 @@ function App() {
   return (
       <Router>
           <>
-              <Header />
+              <Header navLinkTitles={data[1]} />
               <main>
                   <Route path="/" component={Home} exact />
                   <Route path="/About" component={About} />
