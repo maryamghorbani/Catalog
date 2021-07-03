@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router , Route } from 'react-router-dom';
+import { BrowserRouter as Router , Route , Switch } from 'react-router-dom';
 import Header from "./Components/Header";
-import Cards from "./Components/Cards";
 import data from './Components/Data/maindata.json'
 
 // import Routs
@@ -20,14 +19,13 @@ function App() {
       <Router>
           <>
               <Header navLinkTitles={data[0]} />
-              <MainSlider />
               <main>
-                  <Route path="/" component={Home} exact />
-                  <Route path="/About" component={About} />
-                  <Route path="/Contact" component={Contact} />
+                  <Switch>
+                      <Route path="/" exact component={Home} />
+                      <Route path="/About" component={About} />
+                      <Route path="/Contact" component={Contact} />
+                  </Switch>
               </main>
-              <Cards cardTitle={data[1].cardstitle} />
-              <AboutSection aboutTitle={data[2]} />
               <Footer />
           </>
       </Router>
