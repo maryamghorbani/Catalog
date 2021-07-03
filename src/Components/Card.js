@@ -1,8 +1,6 @@
 import React from 'react';
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol } from 'mdb-react-ui-kit';
 
-import photos from './Data/photos.json'
-
 
 function Card() {
 
@@ -10,22 +8,13 @@ function Card() {
 
     return (
         <MDBCol>
-            {
-                photos.map (photo =>
-                    <MDBCard className='h-100'>
-                        <MDBCardImage
-                            src={photo.src}
-                            alt={photo.alt}
-                            position='top'
-                        />
-                        <MDBCardBody>
-                            <MDBCardTitle>{photo.title}</MDBCardTitle>
-                            <MDBCardText>{photo.caption}</MDBCardText>
-                        </MDBCardBody>
-                    </MDBCard>
-                )
-            }
-
+            <MDBCard className='h-100'>
+                <MDBCardImage src="mm" alt="m" position='top'/>
+                <MDBCardBody>
+                    <MDBCardTitle>m</MDBCardTitle>
+                    <MDBCardText>s</MDBCardText>
+                </MDBCardBody>
+            </MDBCard>
         </MDBCol>
     )
 }
