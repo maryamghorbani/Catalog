@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router , Route , Switch } from 'react-router-dom';
 import Header from "./Components/Header";
-import data from './Components/Data/maindata.json'
+import data from './Components/Data/maindata.json';
+import BackToTop from "react-back-to-top-button";
+import { FaArrowCircleUp } from 'react-icons/fa';
 
 // import Routs
 import Home from "./Routs/Home";
@@ -26,6 +28,13 @@ function App() {
                       <Route path="/Contact" component={Contact} />
                   </Switch>
               </main>
+              <BackToTop
+                  showAt={1000}
+                  speed={1500}
+                  easing="easeInOutQuint"
+              >
+                  <FaArrowCircleUp />
+              </BackToTop>
               <Footer />
           </>
       </Router>
